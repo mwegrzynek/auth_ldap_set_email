@@ -15,10 +15,16 @@ class CompanyLDAP(Model):
         # Set e-mail and signature
         attrs = ldap_entry[1]
         
-        values['email'] = attrs['mail'][0]   
-        values['signature'] = '--<br>{0}<br>{1}'.format(
+        email = attrs.get('mail', [''])[0]
+        description = attrs.get('description', [''])[0] 
+        
+        if email:
+            values['email'] = email
+            
+           
+        values['signature'] = '--<br>{0}{1}'.format(
             attrs['cn'][0],
-            attrs['description'][0]
+            ('<br>' + description) if description else ''
         )
         
         return values

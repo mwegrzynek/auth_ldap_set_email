@@ -7,7 +7,7 @@
     'author': 'Litex Service Sp. z o.o.',
     'website': 'http://www.litex.pl',
     'category': 'Authentication',
-    'version': '1.0.0',
+    'version': '1.0.1',
     'depends': [
         'auth_ldap'
     ],
