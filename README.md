@@ -1,4 +1,4 @@
-#Set e-mail and signature for users autocreated by auth_ldap
+#Set e-mail and signature for users autocreated by Odoo's auth_ldap
 
 Users created by auth_ldap get e-mail and signature from the selected template.
 This module gets this data from the LDAP directory and sets:
